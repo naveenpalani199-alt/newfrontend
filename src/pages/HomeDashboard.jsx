@@ -18,6 +18,7 @@ import ProgressBar from '../components/ProgressBar';
 import { useLearning } from '../context/LearningContext';
 import { COURSES } from '../data/coursesData';
 import { PROJECTS } from '../data/projectsData';
+import { getTaskUrl } from '../utils/taskPaths';
 
 export default function HomeDashboard() {
   const { overallStats } = useLearning();
@@ -252,7 +253,7 @@ export default function HomeDashboard() {
                 </div>
 
                 <a
-                  href={`/${proj.path}`}
+                  href={getTaskUrl(proj.path)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold text-white bg-slate-900 hover:bg-emerald-600 dark:bg-slate-800 dark:hover:bg-emerald-600 transition-all shadow-sm"

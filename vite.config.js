@@ -1,12 +1,13 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import { cpSync, existsSync } from 'node:fs';
+import { copyFileSync, cpSync, existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 
-// The exercise folders are existing links into D:/Frontend. Vite can serve
-// those linked files in development, while this plugin includes them in the
-// production build so task URLs keep working after deployment.
-const taskFolders = ['HTML', 'CSS', 'JAVASCRIPT', 'SQL', 'REACT', 'TAILWINDCSS', 'BOOTSTRAP'];
+// These folders contain the existing task and project files published alongside the app.
+const publishedFolders = [
+  'HTML', 'CSS', 'JAVASCRIPT', 'SQL', 'REACT', 'TAILWINDCSS', 'BOOTSTRAP',
+  'Article', 'MOTOVERSE ARTICLE', 'Learning Article',
+];
 
 function includeLinkedTaskFiles() {
   let outDir;
@@ -18,7 +19,7 @@ function includeLinkedTaskFiles() {
     closeBundle() {
       const root = process.cwd();
       const output = resolve(root, outDir);
-      for (const folder of taskFolders) {
+      for (const folder of publishedFolders) {
         const source = resolve(root, folder);
         if (existsSync(source)) {
           cpSync(source, resolve(output, folder), {
@@ -28,6 +29,10 @@ function includeLinkedTaskFiles() {
           });
         }
       }
+
+      // GitHub Pages serves 404.html for unknown paths. Copying the SPA entry
+      // point lets BrowserRouter handle direct visits and refreshes on app routes.
+      copyFileSync(resolve(output, 'index.html'), resolve(output, '404.html'));
     },
   };
 }
@@ -39,7 +44,7 @@ export default defineConfig({
     port: 3000,
     host: true,
     fs: {
-      allow: ['D:/index', 'D:/Frontend'],
+      allow: [process.cwd(), 'D:/index', 'D:/Frontend'],
     },
   },
 });

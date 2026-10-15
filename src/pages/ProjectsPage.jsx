@@ -11,6 +11,7 @@ import {
 } from 'lucide-react';
 import Breadcrumb from '../components/Breadcrumb';
 import { PROJECTS } from '../data/projectsData';
+import { getTaskUrl } from '../utils/taskPaths';
 
 export default function ProjectsPage() {
   return (
@@ -105,7 +106,7 @@ export default function ProjectsPage() {
             {/* Launch Button Action */}
             <div className="p-6 pt-0">
               <a
-                href={`/${proj.path}`}
+                  href={getTaskUrl(proj.path)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-sm font-bold text-white bg-slate-900 hover:bg-emerald-600 dark:bg-slate-800 dark:hover:bg-emerald-600 transition-all shadow-sm group-hover:shadow"

@@ -21,7 +21,7 @@ export default class ErrorBoundary extends React.Component {
       localStorage.removeItem('naveen_completed_tasks');
       localStorage.removeItem('naveen_hub_theme');
     } catch (e) {}
-    window.location.href = '/';
+    window.location.href = import.meta.env.BASE_URL;
   };
 
   render() {
