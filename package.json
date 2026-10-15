@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm --prefix REACT/Day2/my-react-project run build && vite build",
+    "build": "node scripts/build-react-tasks.mjs && vite build",
     "preview": "vite preview"
   },
   "dependencies": {

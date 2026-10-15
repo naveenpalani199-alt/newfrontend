@@ -25,8 +25,22 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci
-      - name: Install React Day 2 dependencies
-        run: npm ci --prefix REACT/Day2/my-react-project
+      - name: Install React task dependencies
+        run: |
+          for project in \
+            REACT/Day2/my-react-project \
+            REACT/Day3/myproject \
+            REACT/Day3/myproject2 \
+            REACT/Day4/myapp \
+            REACT/Day5/day5project \
+            REACT/Day6/day6project \
+            REACT/Day7/day7project \
+            REACT/Day8/day8project \
+            REACT/Day9/day9project \
+            REACT/Day10/day10project
+          do
+            npm ci --prefix "$project"
+          done
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
       - name: Build project

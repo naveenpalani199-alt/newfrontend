@@ -1571,7 +1571,7 @@ export const COURSES = {
             taskNumber: 1,
             title: "Day 3: Props & Component Splitting (Project 1)",
             description: "Build composable UI widgets with configurable props and clean component boundaries.",
-            path: "REACT/Day3/myproject/index.html",
+            path: "REACT/Day3/myproject/dist/index.html",
             difficulty: "Intermediate",
             type: "html"
           },
@@ -1580,7 +1580,7 @@ export const COURSES = {
             taskNumber: 2,
             title: "Day 3: Reusable Components Suite (Project 2)",
             description: "Create reusable UI component library items with flexible prop types and presets.",
-            path: "REACT/Day3/myproject2/index.html",
+            path: "REACT/Day3/myproject2/dist/index.html",
             difficulty: "Intermediate",
             type: "html"
           }
@@ -1596,7 +1596,7 @@ export const COURSES = {
             taskNumber: 1,
             title: "Day 4: Interactive State Management App",
             description: "Interactive application managing counters, toggle switches, and real-time form inputs with useState.",
-            path: "REACT/Day4/myapp/index.html",
+            path: "REACT/Day4/myapp/dist/index.html",
             difficulty: "Intermediate",
             type: "html"
           }
@@ -1612,7 +1612,7 @@ export const COURSES = {
             taskNumber: 1,
             title: "Day 5: Controlled Forms & Validation",
             description: "Build robust user intake forms with real-time field validation and structured state objects.",
-            path: "REACT/Day5/day5project/index.html",
+            path: "REACT/Day5/day5project/dist/index.html",
             difficulty: "Intermediate",
             type: "html"
           }
@@ -1628,7 +1628,7 @@ export const COURSES = {
             taskNumber: 1,
             title: "Day 6: Dynamic List Rendering & Filters",
             description: "Render complex collections dynamically with filter chips, sorting, and conditional empty states.",
-            path: "REACT/Day6/day6project/index.html",
+            path: "REACT/Day6/day6project/dist/index.html",
             difficulty: "Intermediate",
             type: "html"
           }
@@ -1644,7 +1644,7 @@ export const COURSES = {
             taskNumber: 1,
             title: "Day 7: Side Effects & Browser Integration",
             description: "Synchronize component state with document titles, resize listeners, and timers using useEffect.",
-            path: "REACT/Day7/day7project/index.html",
+            path: "REACT/Day7/day7project/dist/index.html",
             difficulty: "Advanced",
             type: "html"
           }
@@ -1660,7 +1660,7 @@ export const COURSES = {
             taskNumber: 1,
             title: "Day 8: REST API Data Consumer",
             description: "Fetch live data from remote endpoints, render loading skeletons, and handle network errors.",
-            path: "REACT/Day8/day8project/index.html",
+            path: "REACT/Day8/day8project/dist/index.html",
             difficulty: "Advanced",
             type: "html"
           }
@@ -1676,7 +1676,7 @@ export const COURSES = {
             taskNumber: 1,
             title: "Day 9: Multi-Component System",
             description: "Modular React application coordinating Task1, Task2, Task3, and Task4 subcomponents.",
-            path: "REACT/Day9/day9project/index.html",
+            path: "REACT/Day9/day9project/dist/index.html",
             difficulty: "Advanced",
             type: "html"
           }
@@ -1692,7 +1692,7 @@ export const COURSES = {
             taskNumber: 1,
             title: "Day 10: Complete React Capstone Project",
             description: "Final comprehensive React project combining state management, animations, and modern UI.",
-            path: "REACT/Day10/day10project/index.html",
+            path: "REACT/Day10/day10project/dist/index.html",
             difficulty: "Expert",
             type: "html"
           }
