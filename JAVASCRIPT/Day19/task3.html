@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task3</title>
+</head>
+<body>
+        <pre id="task-output" aria-live="polite" style="white-space: pre-wrap; font-family: monospace;"></pre>
+    <script>
+      (() => {
+        const output = document.getElementById('task-output');
+        const originalLog = console.log.bind(console);
+        const formatValue = (value) => {
+          if (typeof value === 'string') return value;
+          if (value instanceof Error) return value.name + ': ' + value.message;
+          try { return JSON.stringify(value, null, 2) ?? String(value); }
+          catch { return String(value); }
+        };
+        console.log = (...values) => {
+          output.textContent += values.map(formatValue).join(' ') + String.fromCharCode(10);
+          originalLog(...values);
+        };
+      })();
+    </script>
+<script src="assets/js/task3.js"></script>
+</body>
+</html>
