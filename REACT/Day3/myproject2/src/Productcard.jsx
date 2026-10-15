@@ -1,4 +1,4 @@
-import "./ProductCard.css";
+import "./Productcard.css";
 import localImage from "./assets/headph.jpg";
 
 const Productcard = ()=>{
@@ -13,7 +13,7 @@ const Productcard = ()=>{
       />
 
       <img
-        src="./public/mobile.jpg"
+        src={`${import.meta.env.BASE_URL}mobile.jpg`}
         alt="Mobile"
         className="product-image"
       />

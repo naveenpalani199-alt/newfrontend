@@ -9,10 +9,10 @@ import Courses from "./pages/Courses";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 import Help from "./pages/Help";
-import NotFound from "./pages/NotFound";
+import NotFound from "./pages/Notfound";
 
 const App = () => {
-  const previewBasename = window.location.pathname.startsWith("/REACT/Day4/myapp/") ? "/REACT/Day4/myapp" : "/";
+  const previewBasename = import.meta.env.BASE_URL.replace(/\/$/, "") || "/";
   return (
     <BrowserRouter basename={previewBasename}>
 

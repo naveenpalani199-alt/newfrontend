@@ -1,5 +1,5 @@
 import Header from "./Header";
-import Profilecard from "./ProfileCard";
+import Profilecard from "./Profilecard";
 
 const App = ()=>{
 
